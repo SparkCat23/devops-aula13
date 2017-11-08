@@ -1,0 +1,28 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+<div class="jumbotron">
+    <h1>Lista de Candidatos</h1>
+</div>
+
+  <div>
+    <table class="table">
+      <tr>
+        <th>Candidato</th>
+        <th>RG</th>
+        <th>CPF</th>
+        <th>Telefone</th>
+        <th>endereço</th>
+      </tr>
+      {% for c in lista_candidatos %}
+        <tr>
+          <td>{{ c.nome }}</td>
+          <td>{{ c.RG }}</td>
+          <td>{{ c.CPF }}</td>
+          <td>{{ c.telefone }}</td>
+          <td>{{ c.endereco }}</td>
+        </tr>
+      {% endfor %}
+    </table>
+  </div>
+{% endblock %}
