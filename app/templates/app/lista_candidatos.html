@@ -1,8 +1,12 @@
 {% extends "app/layout.html" %}
 
 {% block content %}
+<div class="jumbotron">
+    <h1>Lista de Candidatos</h1>
+</div>
+
   <div>
-    <table>
+    <table class="table">
       <tr>
         <th>Candidato</th>
         <th>RG</th>
@@ -10,13 +14,13 @@
         <th>Telefone</th>
         <th>endereço</th>
       </tr>
-      {% for p in lista_candidatos %}
+      {% for c in lista_candidatos %}
         <tr>
-          <td>{{ p.nome }}</td>
-          <td>{{ p.RG }}</td>
-          <td>{{ p.CPF }}</td>
-          <td>{{ p.telefone }}</td>
-          <td>{{ p.endereco }}</td>
+          <td>{{ c.nome }}</td>
+          <td>{{ c.RG }}</td>
+          <td>{{ c.CPF }}</td>
+          <td>{{ c.telefone }}</td>
+          <td>{{ c.endereco }}</td>
         </tr>
       {% endfor %}
     </table>
